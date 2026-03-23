@@ -27,3 +27,6 @@ jobs:
           context: .
           push: true
           tags: nguyenphamtanan/0016nguyenphamtanan:latest
+
+      - name: Trigger Deploy Server
+        run: curl -X POST ${{ secrets.DEPLOY_URL }}
